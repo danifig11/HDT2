@@ -14,4 +14,15 @@ public class Main {
         } catch (Exception e) {
             System.out.println("Error :( : " + e.getMessage());
         }
+        
     }
+
+    private static String leerArchivo(String nombreArchivo) throws Exception {
+        String contenido = "";
+        java.io.FileReader fr = new java.io.FileReader(nombreArchivo);
+        java.io.BufferedReader br = new java.io.BufferedReader(fr);
+        contenido = br.readLine();
+        br.close();
+        return contenido;
+    }
+}
